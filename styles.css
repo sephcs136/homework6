@@ -1,0 +1,254 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "footer";
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        padding: 15px;
+    }
+}
+
+
+    table {
+        width: 100%;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+    
+.grid-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 80px 1fr 80px;
+    grid-template-areas: 
+        "header header"
+        "nav main"
+        "footer footer";
+}
+
+.header {
+    font-family:Georgia;
+    grid-area: header;
+    background-color: #311a30;
+    color: #F1E9E9;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    padding-left:20px;
+}
+
+.sidebar {
+    grid-area: nav;
+    background-color: #b586b2;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center;
+    padding-top: 40px;
+}
+
+.main-content {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    grid-area: main;
+    padding: 20px;
+    background-color: #4D2D52;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #311a30;
+    color: #F1E9E9;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+    flex-shrink: 0;
+    padding: 20px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #F1E9E9;
+    font-weight: bold;
+    font-size: 19px;
+    flex-grow:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+.content-section {
+    margin-bottom: 40px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.content-section h2 {
+    color: #ffffff;
+    border-bottom: 1px solid #fffeff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-family:'Times New Roman';
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin: auto;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+td {
+    background-color: #6F3A6E;
+    font-family:'Times New Roman';
+}
+th {
+    background-color: #9A4C95;
+    color: #ffffff;
+}
+
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-item {
+    background-color: #9A4C95;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.1) rotate(2deg);
+    background-color: #c46ec1;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.6);
+    border-radius: 15px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-gap: 20px;
+}
+
+.project-card {
+    padding: 20px;
+    color: white;
+    background-color: #9A4C95;
+    border-radius: 8px;
+    box-shadow: rgb(255, 0, 251) 0px 0px 9px;
+    margin: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.project-card img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+
+.contact-info {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+}
+
+
+.download-btn {
+    position: fixed;
+    bottom: 100px;
+    background-color: #982598;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, border-radius 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #c94ec9;
+    border-radius: 35px;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.8);
+}
+
+a.link {
+    color:#F1E9E9;
+}
